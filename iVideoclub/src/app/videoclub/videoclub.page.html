@@ -1,10 +1,18 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button *ngIf="modoLista == true" (click)="cambiarVista()">
+        <small><ion-icon slot="icon-only" name="apps-sharp"></ion-icon></small>
+      </ion-button>
+      <ion-button *ngIf="modoLista == false" (click)="cambiarVista()">
+        <small><ion-icon slot="icon-only" name="reorder-four-sharp"></ion-icon></small>
+      </ion-button>
+    </ion-buttons>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      iVideoclub
+      <small>iVideoclub</small>
     </ion-title>
   </ion-toolbar>
 </ion-header>

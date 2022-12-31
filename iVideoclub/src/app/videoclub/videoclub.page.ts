@@ -12,6 +12,8 @@ export class VideoclubPage implements OnInit {
 
   listaPeliculas: any[];
 
+  modoLista = true;
+
   constructor(private router: Router, private peliculas: PeliculasService) { 
 
     this.listaPeliculas = peliculas.getPeliculas();
@@ -20,6 +22,10 @@ export class VideoclubPage implements OnInit {
 
   verPaginaDetalle(id: any): void {
     this.router.navigate(['/detalle', id]);
+  }
+
+  cambiarVista() {
+    this.modoLista = !this.modoLista
   }
 
 
