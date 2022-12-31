@@ -12,11 +12,15 @@ export class VideoclubPage implements OnInit {
 
   listaPeliculas: any[];
 
+  empty = false
+
   modoLista = true;
 
   constructor(private router: Router, private peliculas: PeliculasService) { 
 
     this.listaPeliculas = peliculas.getPeliculas();
+
+    this.empty = this.listaPeliculas.length<1
 
   }
 

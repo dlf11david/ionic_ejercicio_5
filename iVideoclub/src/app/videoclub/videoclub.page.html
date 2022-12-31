@@ -32,6 +32,10 @@
     </ion-item>
   </ion-list>
 
+  <div  *ngIf="empty">
+    La lista está vacía
+  </div>
+
   <ion-grid *ngIf="!modoLista">
     <ion-row>
       <ion-col size-md="3" size-sm="4" size-xs="6" *ngFor="let pelicula of listaPeliculas; index as id" (click)="verPaginaDetalle(id)"> 
