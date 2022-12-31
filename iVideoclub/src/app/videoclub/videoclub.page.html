@@ -18,7 +18,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-list lines="full" *ngIf="listaPeliculas">
+
+  <ion-list lines="full" *ngIf="modoLista">
     <ion-item button *ngFor="let pelicula of listaPeliculas; index as id" (click)="verPaginaDetalle(id)" detail>
       <ion-thumbnail slot="start">
         <ion-img src="assets/{{pelicula.poster}}"></ion-img>
@@ -30,4 +31,20 @@
       </ion-label>
     </ion-item>
   </ion-list>
+
+  <ion-grid *ngIf="!modoLista">
+    <ion-row>
+      <ion-col size-md="3" size-sm="4" size-xs="6" *ngFor="let pelicula of listaPeliculas; index as id" (click)="verPaginaDetalle(id)"> 
+        <ion-card>
+          <ion-img src="assets/{{pelicula.poster}}"></ion-img>
+          <ion-card-content>
+            <p><b>{{pelicula.title}}</b></p>
+            <p><b>Director: </b>{{pelicula.director}}</p>
+            <p><b>Año: </b>{{pelicula.year}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
