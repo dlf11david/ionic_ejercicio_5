@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+    <ion-card [routerLink]="['/videoclub']">
+      <ion-card-header>
+        <ion-card-subtitle>Bienvenido a iVideoclub</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        iVideoclub es una aplicación desarrollada con Ionic
+      </ion-card-content>
+      <ion-item>
+        <ion-icon name="videocam" slot="start" size="small"></ion-icon>
+        <ion-label><small>Acceso a videoclub</small></ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card [routerLink]="['/autor']">
+      <ion-card-header>
+        <ion-card-subtitle>Información sobre el autor</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Aplicación desarrollada por David López
+      </ion-card-content>
+      <ion-item>
+        <ion-icon name="person" slot="start" size="small"></ion-icon>
+        <ion-label><small>Consultar información</small></ion-label>
+      </ion-item>
+    </ion-card>
+
+</ion-content>

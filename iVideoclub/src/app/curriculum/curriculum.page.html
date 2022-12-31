@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Currículum
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full" *ngIf="listaTrabajos">
+    <ion-item *ngFor="let trabajo of listaTrabajos">
+      <ion-label class="ion-text-wrap">
+        <h6>{{trabajo.fecha}}</h6>
+        <p>{{trabajo.desc}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
